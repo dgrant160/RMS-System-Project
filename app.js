@@ -19,6 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var mongoDB = "mongodb+srv://admin:password12345@rms.biz6n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
