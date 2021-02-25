@@ -43,4 +43,4 @@ function generateUsers() {
 
 let dataObj = generateUsers();
 
-fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));
+fs.writeFileSync('persontemplate.json', JSON.stringify(dataObj, null, '\t'));

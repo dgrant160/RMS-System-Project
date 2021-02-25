@@ -33,7 +33,7 @@ function generateUsers() {
         "vehicle": vehicle,
         "color_of_car": color_of_car,
         "vin": vin,
-        "mdoel": model,
+        "model": model,
         "type": type,
         "owners": owners,
         "value": value,
@@ -45,4 +45,4 @@ function generateUsers() {
 
 let dataObj = generateUsers();
 
-fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));
+fs.writeFileSync('vehicletemplate.json', JSON.stringify(dataObj, null, '\t'));
