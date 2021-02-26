@@ -14,7 +14,7 @@ function generateUsers() {
     state = faker.address.state();
     country = faker.address.country();
     licenseplate = faker.random.number();
-    vehicle = faker.vehicle.faker();
+    vehicle = faker.vehicle.vehicle();
     colorofcar = faker.vehicle.color();
     vin = faker.vehicle.vin();
     model = faker.vehicle.model();
@@ -23,15 +23,13 @@ function generateUsers() {
     value = faker.finance.amount();
 
     users.push({
-        "id": id,
-        "first_name": firstName,
-        "last_name": lastName,
-        "email": email,
-        "phone_number": phoneNumber,
+        "first_name": firstname,
+        "last_name": lastname,
+        "phone_number": phonenumber,
         "city": city,
         "licenseplate": licenseplate,
         "vehicle": vehicle,
-        "color_of_car": color_of_car,
+        "color_of_car": colorofcar,
         "vin": vin,
         "model": model,
         "type": type,

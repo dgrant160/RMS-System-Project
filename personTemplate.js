@@ -8,23 +8,21 @@ function generateUsers() {
   for (let id=1; id <= 100; id++) {
 
     let firstname = faker.name.firstName();
-        let lastname = faker.name.lastName();
-        let phonenumber = faker.phone.phoneNumber();
-        let city = faker.address.city();
-        let state = faker.address.state();
-        let country = faker.address.country();
-        let height = faker.random.number();
-        let weight = faker.random.number();
-        let witness = faker.name.firstname();
-        let victim = faker.name.firstname();
-        let race = faker.commerce.color();
-        let gender = faker.name.gender();
+    let lastname = faker.name.lastName();
+    let phonenumber = faker.phone.phoneNumber();
+    let city = faker.address.city();
+    let state = faker.address.state();
+    let country = faker.address.country();
+    let height = faker.random.number();
+    let weight = faker.random.number();
+    let witness = faker.name.firstName();
+    let victim = faker.name.firstName();
+    let race = faker.commerce.color();
+    let gender = faker.name.gender();
 
     users.push({
-        "id": id,
         "firstname": firstname,
         "lastname": lastname,
-        "email": email,
         "city": city,
         "state": state,
         "height": height,

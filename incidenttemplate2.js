@@ -1,4 +1,5 @@
-{
+
+let incident = {
 	"data": [
 		{
 			"id": 1,
@@ -1602,3 +1603,6 @@
 		}
 	]
 }
+incident.data.foreach(incident => {
+	
+})
