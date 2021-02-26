@@ -19,7 +19,7 @@ function generateUsers() {
     let country = faker.address.country();
     let witness = faker.name.firstName();
     let victim = faker.name.firstName();
-    let officername = faker.commerce.department();
+    let officername = faker.name.lastName();
     let locationinfo = faker.address.streetAddress();
     let date = faker.date.recent();
     let info = faker.lorem.text();

@@ -77,7 +77,7 @@ app.post('/', (req, res) => {
             country: faker.address.country(),
             witness: faker.name.firstname(),
             vitim: faker.name.firstname(),
-            officename: faker.name.firstName(),
+            officername: faker.name.lastName(),
             locationinfo: faker.address.streetAddress(),
             date: faker.date.recent(),
             info: faker.lorem.text(),
