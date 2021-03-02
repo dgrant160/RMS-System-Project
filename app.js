@@ -21,7 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = "mongodb+srv://admin:password12345@rms.biz6n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var dex_db_url = "mongodb+srv://admin:password12345@rms.biz6n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var mongoDB = process.env.URI || dex_db_url;
+mongoose.Promise = global.Promise;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -35,9 +37,7 @@ app.use('/users', usersRouter);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -48,6 +48,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
 module.exports = app;

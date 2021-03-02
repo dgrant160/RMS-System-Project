@@ -119,3 +119,14 @@ app.post('/', (req, res) => {
     }
     res.redirect('/');
 });  
+
+
+// function startPost(event){
+//     event.preventDefault();
+//     setInterval(function(){
+//         $("field1").load("post.php");
+//     }, 4000)
+// };
+
+// <form onsubmit="preventReload(event)" method='POST' enctype='multipart/form-data'/>
+

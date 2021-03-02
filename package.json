@@ -12,8 +12,8 @@
     "express": "~4.16.1",
     "faker": "^5.4.0",
     "http-errors": "~1.6.3",
-    "mongodb": "^3.6.4",
-    "mongoose": "^5.11.17",
+    "mongodb": "3.6.3",
+    "mongoose": "5.11.15",
     "morgan": "~1.9.1"
   }
 }

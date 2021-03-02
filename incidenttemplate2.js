@@ -1603,6 +1603,6 @@ let incident = {
 		}
 	]
 }
-incident.data.foreach(incident => {
-	
-})
+//incident.data.foreach(incident => {
+//
+//})
