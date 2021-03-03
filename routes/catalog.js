@@ -9,7 +9,7 @@ var vehicle_controller = require('../controllers/vehicleController');
 /// person ROUTES ///
 
 // GET catalog home page.
-//router.get('/', persons_controller.index);
+ router.get('/', person_controller.index);
 
 // // GET request for creating a person. NOTE This must come before routes that display person (uses id).
  router.get('/person/create', person_controller.person_create_get);

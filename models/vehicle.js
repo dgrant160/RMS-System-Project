@@ -4,7 +4,7 @@ var faker = require('faker');
 
 var Schema = mongoose.Schema;
 
-var VehicleSchema = new Schema({
+var vehicleSchema = new Schema({
     license_plate: { type: String, required: true, maxlength: 100 },
     color_of_car: { type: String, required: true, maxlength: 100 },
     year: { type: String, required: true, maxlength: 4 },
@@ -17,4 +17,4 @@ var VehicleSchema = new Schema({
     incidents_that_it_is_attached_to: { type: String, required: true, maxlength: 100 },
     value : {type: String, required: true, maxlength : 100},
 });
-module.exports = mongoose.model('Vehicle', VehicleSchema);
+module.exports = mongoose.model('vehicle', vehicleSchema);
