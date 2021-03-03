@@ -37,7 +37,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);
 
-
+app.use(express.static('public/stylesheets'));
 // catch 404 and forward to error handler
 
 
