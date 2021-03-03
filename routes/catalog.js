@@ -3,16 +3,16 @@ var router = express.Router();
 
 // Require controller modules.
 var incident_controller = require('../controllers/incidentController');
-var persons_controller = require('../controllers/personsController');
+var person_controller = require('../controllers/personController');
 var vehicle_controller = require('../controllers/vehicleController');
 
 /// person ROUTES ///
 
 // GET catalog home page.
-router.get('/', persons_controller.index);
+//router.get('/', persons_controller.index);
 
 // // GET request for creating a person. NOTE This must come before routes that display person (uses id).
- router.get('/person/create', "testing");//person_controller.person_create_get
+ router.get('/person/create', person_controller.person_create_get);
 
 // // POST request for creating person.
 // router.post('/person/create', person_controller.person_create_post);
@@ -38,7 +38,7 @@ router.get('/', persons_controller.index);
 // /// incident ROUTES ///
 
 // // GET request for creating incident. NOTE This must come before route for id (i.e. display incident).
-// router.get('/incident/create', incident_controller.incident_create_get);
+router.get('/incident/create', incident_controller.incident_create_get);
 
 // // POST request for creating incident.
 // router.post('/incident/create', incident_controller.incident_create_post);
@@ -64,7 +64,7 @@ router.get('/', persons_controller.index);
 // /// vehicle ROUTES ///
 
 // // GET request for creating a vehicle. NOTE This must come before route that displays vehicle (uses id).
-// router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
+router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
 
 // //POST request for creating vehicle.
 // router.post('/vehicle/create', vehicle_controller.vehicle_create_post);

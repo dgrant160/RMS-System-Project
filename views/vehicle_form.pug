@@ -1,0 +1,123 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  title= title
+  link(rel='stylesheet' href='assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='assets/fonts/font-awesome.min.css')
+  link(rel='stylesheet' href='assets/css/styles.css')
+h1(style='background: #f2f2f2;padding: 0px;margin: 0px;border-radius: 11px;text-align: center;margin-left: 60px;margin-right: 60px;margin-top: 14px;margin-bottom: 38px;')= title
+form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-content-center.align-items-center.align-content-center.align-self-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='margin: 0px;background: #eeeeee;border-radius: 10px;font-size: 1em;padding: 24px;margin-right: 60px;width: 859.2px;height: 622px;margin-left: 60px;margin-top: 0px;')
+  .form-group.d-flex.d-lg-flex.flex-row.flex-grow-1.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;text-align: center;margin-right: 0px;padding: 0px;margin-top: 0px;')
+    label.m-auto(style='font-size: 1.6em;text-align: center;')
+      | License Plate&nbsp;
+      input.form-control(type='text' style='margin: -1px;')
+    label.m-auto(style='font-size: 1.6em;text-align: center;')
+      | State
+      select
+        option(value='') --
+        option(value='AL') Alabama
+        option(value='AK') Alaska
+        option(value='AZ') Arizona
+        option(value='AR') Arkansas
+        option(value='CA') California
+        option(value='CO') Colorado
+        option(value='CT') Connecticut
+        option(value='DE') Delaware
+        option(value='DC') District Of Columbia
+        option(value='FL') Florida
+        option(value='GA') Georgia
+        option(value='HI') Hawaii
+        option(value='ID') Idaho
+        option(value='IL') Illinois
+        option(value='IN') Indiana
+        option(value='IA') Iowa
+        option(value='KS') Kansas
+        option(value='KY') Kentucky
+        option(value='LA') Louisiana
+        option(value='ME') Maine
+        option(value='MD') Maryland
+        option(value='MA') Massachusetts
+        option(value='MI') Michigan
+        option(value='MN') Minnesota
+        option(value='MS') Mississippi
+        option(value='MO') Missouri
+        option(value='MT') Montana
+        option(value='NE') Nebraska
+        option(value='NV') Nevada
+        option(value='NH') New Hampshire
+        option(value='NJ') New Jersey
+        option(value='NM') New Mexico
+        option(value='NY') New York
+        option(value='NC') North Carolina
+        option(value='ND') North Dakota
+        option(value='OH') Ohio
+        option(value='OK') Oklahoma
+        option(value='OR') Oregon
+        option(value='PA') Pennsylvania
+        option(value='RI') Rhode Island
+        option(value='SC') South Carolina
+        option(value='SD') South Dakota
+        option(value='TN') Tennessee
+        option(value='TX') Texas
+        option(value='UT') Utah
+        option(value='VT') Vermont
+        option(value='VA') Virginia
+        option(value='WA') Washington
+        option(value='WV') West Virginia
+        option(value='WI') Wisconsin
+        option(value='WY') Wyoming
+    label.m-auto(style='text-align: center;font-size: 20;')
+      | Value
+      input.form-control(type='text')
+  .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+    label.m-auto(style='text-align: center;')
+      | Color
+      input.form-control(type='text')
+    label.m-auto(style='text-align: center;')
+      | Year
+      input.form-control(type='text')
+    label.m-auto(style='text-align: center;')
+      | Make
+      input.form-control(type='text')
+  .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center(style='padding: 0px;margin: 0px;margin-right: 0px;')
+    label.m-auto(style='text-align: center;')
+      | Body Type
+      input.form-control(type='text')
+    label.m-auto(style='text-align: center;')
+      | Model
+      input.form-control(type='text')
+    label.m-auto(style='text-align: center;')
+      | VIN
+      input.form-control(type='text')
+  .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+    .col-md-12.search-table-col(style='margin-top: 24px;')
+      label(style='font-size: 28px;') Registered Owner
+      .form-group.pull-right.col-lg-4
+        input.form-control.search.form-control(type='text' placeholder='Search by typing here..')
+      span.counter.pull-right
+      .table-responsive.table-bordered.d-lg-flex.table.table-hover.table-bordered.results
+        table.table.table-bordered.table-hover
+          thead.bill-header.cs
+            tr
+              th#trs-hd-2.col-lg-1(style='padding: 16px;height: 62.8px;width: 515px;') Name
+              th#trs-hd-3.col-lg-2(style='width: 516.6px;') Hazard
+              th#trs-hd-4.col-lg-3(style='width: 537.8px;') Address&nbsp;
+              th#trs-hd-5.col-lg-2(style='width: 549.2px;') Phone Number
+              th#trs-hd-6.col-lg-2(style='width: 528.4px;') Photo
+              th#trs-hd-7.col-lg-2(style='width: 531.8px;') Add or Remove
+          tbody
+            tr.warning.no-result
+            tr
+              td(style='text-align: center;') Mario
+              td(style='text-align: center;') Yes
+              td(style='text-align: center;') 5555 Mushroom Kingdom
+              td(style='text-align: center;') 555-555-5555
+              td(style='text-align: center;')
+                img(src='MarioNSMBUDeluxe.png' style='height: 71px;')
+              td
+                button.btn.btn-success(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-check(style='font-size: 15px;')
+                button.btn.btn-danger(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-trash(style='font-size: 15px;')
+script(src='assets/js/jquery.min.js')
+script(src='assets/bootstrap/js/bootstrap.min.js')

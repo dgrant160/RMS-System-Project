@@ -17,3 +17,4 @@ var VehicleSchema = new Schema({
     incidents_that_it_is_attached_to: { type: String, required: true, maxlength: 100 },
     value : {type: String, required: true, maxlength : 100},
 });
+module.exports = mongoose.model('Vehicle', VehicleSchema);
