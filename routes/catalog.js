@@ -30,7 +30,7 @@ var vehicle_controller = require('../controllers/vehicleController');
 // router.post('/person/:id/update', person_controller.person_update_post);
 
 // // GET request for one person.
-// router.get('/person/:id', person_controller.person_detail);
+ router.get('/incident/:id', incident_controller.incident_detail);
 
 // // GET request for list of all person items.
 // router.get('/persons', person_controller.person_list);

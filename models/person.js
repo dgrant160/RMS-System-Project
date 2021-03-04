@@ -19,5 +19,6 @@ var personSchema = new Schema({
     state: {type: String, required: true, maxlength : 100},
     country: {type: String, required: true, maxlength : 100},
     city : {type: String, required: true, maxlength : 100},
+    phone_number: { type: String, required: true, maxlength: 10000000 }
 });
 module.exports = mongoose.model('person', personSchema);
