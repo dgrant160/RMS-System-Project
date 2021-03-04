@@ -86,7 +86,7 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
             tr.warning.no-result
               td(colspan='12')
                 i.fa.fa-warning
-                | &nbsp; No Result !!!
+                | &nbsp; No Result
             tr
               td(style='text-align: center;') #{first_name}
               td(style='text-align: center;') #{location_information}
@@ -121,20 +121,20 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
             tr.warning.no-result
               td(colspan='12')
                 i.fa.fa-warning
-                | &nbsp; No Result !!!
+                | &nbsp; No Result
             tr
-              td(style='text-align: center;') 6885YOSHI
-              td(style='text-align: center;') GRN (Green)
-              td(style='text-align: center;') 576088685
-              td(style='text-align: center;') Yoshi
+              td(style='text-align: center;') #{colorofcar}
+              td(style='text-align: center;') #{vin}
+              td(style='text-align: center;') #{model}
               td(style='text-align: center;')
+              td(style='text-align: center;') #{owners}
                 img(src='assets/img/Super_Smash_Bros._Ultimate_-_Character_Art_-_Yoshi.png' style='height: 71px;')
               td
                 button.btn.btn-success(style='margin-left: 5px;' type='submit')
                   i.fa.fa-check(style='font-size: 15px;')
                 button.btn.btn-danger(style='margin-left: 5px;' type='submit')
                   i.fa.fa-trash(style='font-size: 15px;')
-              td(style='text-align: center;') Mario
+              td(style='text-align: center;') #{firstname}
 script(src='assets/js/jquery.min.js')
 script(src='assets/bootstrap/js/bootstrap.min.js')
 script(src='assets/js/Table-With-Search.js')
