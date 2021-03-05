@@ -23,6 +23,7 @@ function generateUsers() {
     value = faker.finance.amount();
 
     users.push({
+        "id": id,
         "first_name": firstname,
         "last_name": lastname,
         "phone_number": phonenumber,

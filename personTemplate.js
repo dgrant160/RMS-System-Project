@@ -21,6 +21,7 @@ function generateUsers() {
     let gender = faker.name.gender();
 
     users.push({
+        "id": id,
         "firstname": firstname,
         "lastname": lastname,
         "city": city,

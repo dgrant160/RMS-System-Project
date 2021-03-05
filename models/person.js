@@ -21,4 +21,4 @@ var personSchema = new Schema({
     city : {type: String, required: true, maxlength : 100},
     phone_number: { type: String, required: true, maxlength: 10000000 }
 });
-module.exports = mongoose.model('person', personSchema);
+module.exports = mongoose.model('Person', personSchema);

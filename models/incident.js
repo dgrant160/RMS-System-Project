@@ -4,7 +4,7 @@ var faker = require('faker');
 
 var Schema = mongoose.Schema;
 
-var IncidentSchema = new Schema({
+var incidentSchema = new Schema({
     incident_type: { type: String, required: true, maxlength: 100 },
     incident_report_number: { type: String, required: true, maxlength: 100 },
     person_name: { type: String, required: true, maxlength: 100 },
@@ -17,3 +17,4 @@ var IncidentSchema = new Schema({
     phone_number: { type: String, required: true, maxlength: 10000000 }
 });
 
+module.exports = mongoose.model('Incident', incidentSchema);
