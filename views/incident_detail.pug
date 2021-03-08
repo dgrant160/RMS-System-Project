@@ -1,2 +1,142 @@
 extends incident_form
 
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  title= title
+  link(rel='stylesheet' href='/bootstrap.min.css')
+  link(rel='stylesheet' href='/font-awesome.min.css')
+  link(rel='stylesheet' href='/styles.css')
+  link(rel='stylesheet' href='/Table-With-Search-1.css')
+  link(rel='stylesheet' href='/Table-With-Search.css')
+h1(style='background: #f2f2f2;padding: 0px;margin: 1em;border-radius: 11px;text-align: center;margin-left: 40px;')= title
+form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;' method='POST' action='')
+  .form-group.d-flex.justify-content-center.align-content-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;margin-bottom: -60px;text-align: center;')
+    label.m-auto(style='font-size: 1.6em;margin: 0px;margin-left: 11px;text-align: center;')
+      | Incident Report Number
+      br
+      input.form-control(type='text' style='padding: 0px;')
+    label.m-auto(style='font-size: 1.5em;margin: 0px;text-align: center;height: 62px;width: 188px;border-radius: 0px;padding: 0px;margin-top: 0px;margin-bottom: 0px;line-height: 8px;')
+      br
+      | Occurrence Date &amp; Time
+      br
+      br
+      input.form-control(type='date' style='height: 38px;border-radius: 5px;padding: 0px;line-height: 24px;text-align: left;')
+    label.m-auto(style='font-size: 1.6em;margin: 0px;text-align: center;')
+      | Location Information
+      input.form-control(type='text' style='margin: -1px;')
+    label.m-auto(style='font-size: 1.6em;margin-left: 0px;text-align: center;margin-bottom: 0px;')
+      | Location Common Name
+      input.form-control(type='text')
+  .form-group.text-center.d-flex.flex-row.justify-content-center.flex-wrap(style='margin: 0px;')
+    label.text-center.d-flex.flex-row.flex-shrink-1(style='font-size: 2em;text-align: center;') Narrative
+    textarea.form-control.d-lg-flex(style='line-height: 70px;text-align: center;border-radius: 22px;margin: 0px;margin-left: 10px;margin-right: 10px;')
+  .form-group.d-lg-flex.m-auto.justify-content-lg-center.align-items-lg-center(style='text-align: center;margin-bottom: 16px;margin-left: 0px;margin-top: 0px;')
+    label.m-auto
+      | Officer Name
+      input.form-control(type='text')
+    label.m-auto
+      | Badge Number
+      input.form-control(type='text')
+    label.m-auto
+      | Report Date &amp; Time
+      br
+      input.form-control(type='text')
+    label.m-auto(style='text-align: center;')
+      | Incident Type
+      select.form-control
+        optgroup(label='Incident Type')
+          option(value='12' selected='') 211 (Robbery)
+          option(value='13') 236 (Threat)
+          option(value='14') 237 (Drugs
+          option(value='') 240 (Assault)
+          option(value='') 245 (Weapons Violation)
+          option(value='') 261 (Rape)
+          option(value='') 318 (Fraud)
+          option(value='') 390D (Drunk Driver)
+          option(value='') 415 (Subject Disturbing)
+          option(value='') 415B (Criminal Damage)
+          option(value='') 4150 (Violation of Court Order)
+          option(value='') 418T (Tresspassing)
+          option(value='') 451 (Homicide)
+          option(value='') 459 (Burglary)
+          option(value='') 487 (Theft)
+          option(value='') 601 (Missings Person)
+          option(value='') 647 (Suspicious Person/Activity)
+          option(value='') 901H (Dead Body)
+          option(value='') 918 (Insane Person)
+          option(value='') 961 (Collision)
+          option(value='')
+  .form-group.d-lg-flex.m-auto.justify-content-lg-center.align-items-lg-center
+    .col-md-12.search-table-col
+      label(style='font-size: 28px;') Related Persons
+      .form-group.pull-right.col-lg-4
+        input.form-control.search.form-control(type='text' placeholder='Search by typing here..')
+      span.counter.pull-right
+      .table-responsive.table-bordered.d-lg-flex.table.table-hover.table-bordered.results
+        table.table.table-bordered.table-hover
+          thead.bill-header.cs
+            tr
+              th#trs-hd.col-lg-1(style='padding: 16px;height: 62.8px;width: 515px;') Name
+              th#trs-hd.col-lg-2(style='width: 516.6px;') Hazard
+              th#trs-hd.col-lg-3(style='width: 537.8px;') Address&nbsp;
+              th#trs-hd.col-lg-2(style='width: 549.2px;') Phone Number
+              th#trs-hd.col-lg-2(style='width: 528.4px;') Photo
+              th#trs-hd.col-lg-2(style='width: 531.8px;') Add or Remove
+              th#trs-hd-1.col-lg-2(style='width: 531.8px;') Code
+          tbody
+            tr.warning.no-result
+              td(colspan='12')
+                i.fa.fa-warning
+                | &nbsp; No Result
+            tr
+              td(style='text-align: center;') #{first_name}
+              td(style='text-align: center;') #{location_information}
+              td(style='text-align: center;') #{phone_number}
+              td(style='text-align: center;') 
+              td(style='text-align: center;')
+                img(src='assets/img/MarioNSMBUDeluxe.png' style='height: 71px;')
+              td
+                button.btn.btn-success(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-check(style='font-size: 15px;')
+                button.btn.btn-danger(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-trash(style='font-size: 15px;')
+              td(style='text-align: center;') S (Suspect)
+  .form-group
+    .col-md-12.search-table-col
+      label(style='font-size: 28px;') Related Vehicles
+      .form-group.pull-right.col-lg-4
+        input.form-control.search.form-control(type='text' placeholder='Search by typing here..')
+      span.counter.pull-right
+      .table-responsive.table-bordered.d-lg-flex.table.table-hover.table-bordered.results
+        table.table.table-bordered.table-hover
+          thead.bill-header.cs
+            tr
+              th#trs-hd-2.col-lg-1(style='padding: 16px;height: 62.8px;width: 515px;') License Plate&nbsp;
+              th#trs-hd-3.col-lg-2(style='width: 516.6px;') Color of car
+              th#trs-hd-4.col-lg-3(style='width: 537.8px;') VIN
+              th#trs-hd-5.col-lg-2(style='width: 549.2px;') Make
+              th#trs-hd-6.col-lg-2(style='width: 528.4px;') Body Type
+              th#trs-hd-7.col-lg-2(style='width: 531.8px;') Add or Remove
+              th#trs-hd-8.col-lg-2(style='width: 531.8px;') Registered Owner
+          tbody
+            tr.warning.no-result
+              td(colspan='12')
+                i.fa.fa-warning
+                | &nbsp; No Result
+            tr
+              td(style='text-align: center;') #{colorofcar}
+              td(style='text-align: center;') #{vin}
+              td(style='text-align: center;') #{model}
+              td(style='text-align: center;')
+              td(style='text-align: center;') #{owners}
+                img(src='assets/img/Super_Smash_Bros._Ultimate_-_Character_Art_-_Yoshi.png' style='height: 71px;')
+              td
+                button.btn.btn-success(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-check(style='font-size: 15px;')
+                button.btn.btn-danger(style='margin-left: 5px;' type='submit')
+                  i.fa.fa-trash(style='font-size: 15px;')
+              td(style='text-align: center;') #{firstname}
+script(src='assets/js/jquery.min.js')
+script(src='assets/bootstrap/js/bootstrap.min.js')
+script(src='assets/js/Table-With-Search.js')
