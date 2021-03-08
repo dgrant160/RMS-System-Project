@@ -1,10 +1,11 @@
 head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  script(src='/login.js')
   title RMS
-  link(rel='stylesheet' href='assets/bootstrap/css/bootstrap.min.css')
-  link(rel='stylesheet' href='font-awesome.min.css')
-  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/font-awesome.min.css')
+  link(rel='stylesheet' href='/https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
   link(rel='stylesheet' href='/styles.css')
 .rubberBand.animated(style='padding: 176px;')
   div
@@ -17,6 +18,23 @@ head
     i.fa.fa-lock(style='margin: 0px;margin-left: 10px;')
     input(type='text' style='background: #f1f1f1ca;border-radius: 0px;border-style: none;' placeholder='Password' value='Password')
   div(style='background: linear-gradient(rgb(121,52,190), rgb(69,104,228)), #aef596;border-radius: 25px;padding: 10px;margin-top: 12px;')
-    p.text-center(style='font-size: 24px;margin-bottom: 5px;color: rgb(255,255,255);') Login
-script(src='assets/js/jquery.min.js')
-script(src='assets/bootstrap/js/bootstrap.min.js')
+    button.btn.btn-primary(type='submit' value='login' onclick='validate()') Login
+    //-script.
+  //- function handleEnter(e) {
+  //- if(e.keyCode === 13){
+  //- validate()
+  //- }
+  //- }
+  //- function validate(){
+  //- var username = document.getElementById("username").value;
+  //- var password = document.getElementById("password").value;
+  //- if(username === "admin" && password === "westmec"){
+  //- alert("Login successful.");
+  //- location.replace("home.html");
+  //- return false;
+  //- }else{
+  //- alert("Username or password is incorrect, please try again.");
+  //- }
+  //- }
+script(src='/jquery.min.js')
+script(src='/bootstrap/js/bootstrap.min.js')
