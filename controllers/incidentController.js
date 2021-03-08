@@ -20,10 +20,10 @@ exports.incident_create_get = function (req, res, next) {
 exports.incident_detail = function (req, res, next) {
     Person.findOne({
         Person: function (callback) {
-            Person.findbyId(callback);
+            Person.find(callback);
         },
         Vehicle: function (callback) {
-            Vehicle.findbyId(callback);
+            Vehicle.find(callback);
         },
     }, function (err, results) {
         if (err) { return next(err); }
@@ -31,7 +31,3 @@ exports.incident_detail = function (req, res, next) {
         res.render('incident_detail', { title: 'Incident detail' });
     });
 };
-
-
-
-

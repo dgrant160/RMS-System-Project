@@ -2,94 +2,93 @@ head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
   title= title
-  link(rel='stylesheet' href='assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
 h1(style='background: #f2f2f2;padding: 0px;margin: 0px;border-radius: 11px;text-align: center;margin-left: 60px;margin-right: 60px;margin-top: 14px;margin-bottom: 38px;')= title
 form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-content-center.align-items-center.align-content-center.align-self-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center( method='POST' action='' style='margin: 0px;background: #eeeeee;border-radius: 10px;font-size: 1em;padding: 0px;margin-right: 60px;width: 859.2px;height: 380px;margin-left: 60px;')
-.form-group.d-flex.d-lg-flex.flex-row.flex-grow-1.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;text-align: center;margin-right: 0px;padding: 0px;')
-  label.m-auto(style='font-size: 1.6em;text-align: center;')
+div.form-group.d-flex.d-lg-flex.flex-row.flex-grow-1.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;text-align: center;margin-right: 0px;padding: 0px;')
+  label.m-auto(for='name' style='font-size: 1.6em;text-align: center;')
     | Name
-    input.form-control(type='text' style='margin: -1px;')
-  label.m-auto(style='font-size: 1.6em;text-align: center;')
+    input#name.form-control( name='name' type='text' style='margin: -1px;')
+  label.m-auto(for='ssn' style='font-size: 1.6em;text-align: center;')
     | SSN
-    input.form-control(type='text')
-  label.d-lg-flex.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: 22.2px;text-align: left;margin-right: 0px;width: 225.988px;')
+    input#ssn.form-control(name='ssn' type='text')
+  label.d-lg-flex.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(for='hazard' style='font-size: 22.2px;text-align: left;margin-right: 0px;width: 225.988px;')
     | Hazard
-    input.d-lg-flex.align-content-end.align-self-end.justify-content-lg-center(type='checkbox' style='width: 73.8px;font-size: 30.12px;height: 22.8px;margin-right: 0px;margin-left: 0px;text-align: right;')
-    .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
-  label.m-auto(style='text-align: center;')
+    input#hazard.d-lg-flex.align-content-end.align-self-end.justify-content-lg-center(name='hazard' type='checkbox' style='width: 73.8px;font-size: 30.12px;height: 22.8px;margin-right: 0px;margin-left: 0px;text-align: right;')
+    div.form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+  label.m-auto(for='gender' style='text-align: center;')
     | Gender
-    select.form-control
+    select#gender.form-control
       optgroup(label='Gender')
-        option(value='12' selected='') Unknown
-        option(value='13') Male
-        option(value='14') Female
-  label.m-auto(style='text-align: center;')
+        option(value='Unknown' selected='') Unknown
+        option(value='Male') Male
+        option(value='Female') Female
+  label.m-auto(for='race' style='text-align: center;')
     | Race
-    select.form-control
+    select#race.form-control
       optgroup(label='Race')
-        option(value='12' selected='') U (Unknown)
-        option(value='13') W (White)
-        option(value='14') B (Black)
-        option(value='') H (Hispanic)
-        option(value='') I (Indian)
-        option(value='') A (Asian)
+        option(value='U' selected='') U (Unknown)
+        option(value='W') W (White)
+        option(value='B') B (Black)
+        option(value='H') H (Hispanic)
+        option(value='I') I (Indian)
+        option(value='A') A (Asian)
   label.m-auto(style='text-align: center;')
     | Eye Color
-    select.form-control
+    select#eye.form-control
       optgroup(label='Color')
-        option(value='12' selected='') BRO (Brown)
-        option(value='13') BLK (Black)
-        option(value='14') BLU (Blue)
-        option(value='') GRN (Green)
-        option(value='') HAZ (Hazle)
-        option(value='') GRY (Grey)
+        option(value='BRO' selected='') BRO (Brown)
+        option(value='BLK') BLK (Black)
+        option(value='BLU') BLU (Blue)
+        option(value='GRN') GRN (Green)
+        option(value='HAZ') HAZ (Hazle)
+        option(value='GRY') GRY (Grey)
   label.m-auto(style='text-align: center;')
     | Hair Color
-    select.form-control
+    select#hair.form-control
       optgroup(label='Color')
-        option(value='12' selected='') BRO (Brown)
-        option(value='13') BLK (Black)
-        option(value='14') BLU (Blue)
-        option(value='') GRN (Green)
-        option(value='') HAZ (Hazle)
-        option(value='') GRY (Grey)
-        option(value='') PNK (Pink)
-        option(value='') BLN (Blonde)
-        option(value='') BLD (Bald)
-    .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+        option(value='BRO' selected='') BRO (Brown)
+        option(value='BLK') BLK (Black)
+        option(value='BLU') BLU (Blue)
+        option(value='GRN') GRN (Green)
+        option(value='HAZ') HAZ (Hazle)
+        option(value='GRY') GRY (Grey)
+        option(value='PNK') PNK (Pink)
+        option(value='BLN') BLN (Blonde)
+        option(value='BLD') BLD (Bald)
+    div.form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
   label.m-auto(style='text-align: center;')
-    | State
+    | Date of birth
     br
-    input.form-control(type='date')
+    input#date_of_birth.form-control(type='date')
   label.m-auto(style='text-align: center;')
-    | Country
+    | Age
     br
-    input.form-control(type='number' style='width: 68.6px;')
+    input#age.form-control(type='number' style='width: 68.6px;')
   label.m-auto(style='text-align: center;')
     | Height
     br
-    input.form-control(type='number' style='width: 68.6px;')
+    input#height.form-control(type='number' style='width: 68.6px;')
   label.m-auto(style='text-align: center;')
     | Weight
     br
-    input.form-control(type='number' style='width: 68.6px;')
+    input#weight.form-control(type='number' style='width: 68.6px;')
   label.m-auto(style='text-align: center;')
     | Scars/Marks/Tattoos
-    input.form-control(type='text')
-  .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+    input#scars_marks_tattoos.form-control(type='text')
+  div.form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
     label.m-auto(style='text-align: center;')
       | Home Address
-      input.form-control(type='text')
+      input#address.form-control(type='text')
     label.m-auto(style='text-align: center;')
       | Phone Number
-      input.form-control(type='text')
-  .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
+      input#phone.form-control(type='text')
+  div.form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
     label.m-auto(style='text-align: center;')
       | Mugshot
-      input.form-control-file(type='file')
+      input#mugshot.form-control-file(type='file')
     label.d-lg-flex.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: 22.2px;text-align: left;margin-right: 0px;width: 225.988px;')
       | Gang Affiliation
       input.d-lg-flex.align-content-end.align-self-end.justify-content-lg-center(type='checkbox' style='width: 73.8px;font-size: 30.12px;height: 22.8px;margin-right: 0px;margin-left: 0px;text-align: right;')
-script(src='assets/js/jquery.min.js')
-script(src='assets/bootstrap/js/bootstrap.min.js')
-
+script(src='/javascripts/jquery.min.js')
+script(src='/javascripts/bootstrap.min.js')
