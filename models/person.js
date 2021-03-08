@@ -4,7 +4,7 @@ var faker = require('faker');
 
 var Schema = mongoose.Schema;
 
-var personSchema = new Schema({
+var PersonSchema = new Schema({
     first_name: { type: String, required: true, maxlength: 100 },
     last_name : {type: String, required: true, maxlength : 100},
     reporting_person: { type: String, maxlength: 100 },
@@ -21,4 +21,4 @@ var personSchema = new Schema({
     city : {type: String, required: true, maxlength : 100},
     phone_number: { type: String, required: true, maxlength: 10000000 }
 });
-module.exports = mongoose.model('Person', personSchema);
+module.exports = mongoose.model('Person', PersonSchema);
