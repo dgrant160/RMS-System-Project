@@ -4,14 +4,14 @@ exports.index = function (req,res) {
     res.render('testing');
 }
 exports.person_create_get = function (req, res, next) {
-//  async.parallel({
-//          vehicle: function (callback) {
-//              vehicle.find(callback);
-//          },
-//      }, function (err, results) {
-//          if (err) { return next(err); }
+  async.parallel({
+          vehicle: function (callback) {
+              vehicle.find(callback);
+          },
+      }, function (err, results) {
+          if (err) { return next(err); }
          res.render('person_form', { title: 'Create Person' });
-//     });    
+     });    
 };
 
 exports.index = function (req, res) {
@@ -19,6 +19,202 @@ exports.index = function (req, res) {
     };
 
     exports.person_create_post = [
+
+        (req, res, next) => {
+    
+            var person = new Person(
+                {
+                    name: req.body.name,
+                    ssn: req.body.ssn,
+                    hazard: req.body.hazard,
+                    gender: req.body.gender,
+                    race: req.body.race,
+                    eye: req.body.eye,
+                    hair: req.body.hair,
+                    date_of_birth: req.body.date_of_birth,
+                    height: req.body.height,
+                    weight: req.body.weight,
+                    scars_marks_tattoos: req.body.scars_marks_tattoos,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                    gang_affiliation: req.body.gang_affiliation,
+                    mugshot: req.body.mugshot,
+                }
+            );
+    
+            if (!errors.isEmpty()) {
+                
+                res.render('person_form', { title: 'Create Person', person: person, errors: errors.array() });
+                return;
+            }
+            else {
+                
+                person.save(function (err) {
+                    if (err) { return next(err); }
+                    
+                    res.redirect(person.url);
+                });
+            }
+        }
+    ];
+
+    exports.person_delete_get = [
+
+        (req, res, next) => {
+    
+            var person = new Person(
+                {
+                    name: req.body.name,
+                    ssn: req.body.ssn,
+                    hazard: req.body.hazard,
+                    gender: req.body.gender,
+                    race: req.body.race,
+                    eye: req.body.eye,
+                    hair: req.body.hair,
+                    date_of_birth: req.body.date_of_birth,
+                    height: req.body.height,
+                    weight: req.body.weight,
+                    scars_marks_tattoos: req.body.scars_marks_tattoos,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                    gang_affiliation: req.body.gang_affiliation,
+                    mugshot: req.body.mugshot,
+                }
+            );
+    
+            if (!errors.isEmpty()) {
+                
+                res.render('person_form', { title: 'Create Person', person: person, errors: errors.array() });
+                return;
+            }
+            else {
+                
+                person.save(function (err) {
+                    if (err) { return next(err); }
+                    
+                    res.redirect(person.url);
+                });
+            }
+        }
+    ];
+    exports.person_delete_post = [
+
+        (req, res, next) => {
+    
+            var person = new Person(
+                {
+                    name: req.body.name,
+                    ssn: req.body.ssn,
+                    hazard: req.body.hazard,
+                    gender: req.body.gender,
+                    race: req.body.race,
+                    eye: req.body.eye,
+                    hair: req.body.hair,
+                    date_of_birth: req.body.date_of_birth,
+                    height: req.body.height,
+                    weight: req.body.weight,
+                    scars_marks_tattoos: req.body.scars_marks_tattoos,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                    gang_affiliation: req.body.gang_affiliation,
+                    mugshot: req.body.mugshot,
+                }
+            );
+    
+            if (!errors.isEmpty()) {
+                
+                res.render('person_form', { title: 'Create Person', person: person, errors: errors.array() });
+                return;
+            }
+            else {
+                
+                person.save(function (err) {
+                    if (err) { return next(err); }
+                    
+                    res.redirect(person.url);
+                });
+            }
+        }
+    ];
+    exports.person_update_get = [
+
+        (req, res, next) => {
+    
+            var person = new Person(
+                {
+                    name: req.body.name,
+                    ssn: req.body.ssn,
+                    hazard: req.body.hazard,
+                    gender: req.body.gender,
+                    race: req.body.race,
+                    eye: req.body.eye,
+                    hair: req.body.hair,
+                    date_of_birth: req.body.date_of_birth,
+                    height: req.body.height,
+                    weight: req.body.weight,
+                    scars_marks_tattoos: req.body.scars_marks_tattoos,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                    gang_affiliation: req.body.gang_affiliation,
+                    mugshot: req.body.mugshot,
+                }
+            );
+    
+            if (!errors.isEmpty()) {
+                
+                res.render('person_form', { title: 'Create Person', person: person, errors: errors.array() });
+                return;
+            }
+            else {
+                
+                person.save(function (err) {
+                    if (err) { return next(err); }
+                    
+                    res.redirect(person.url);
+                });
+            }
+        }
+    ];
+    exports.person_update_post = [
+
+        (req, res, next) => {
+    
+            var person = new Person(
+                {
+                    name: req.body.name,
+                    ssn: req.body.ssn,
+                    hazard: req.body.hazard,
+                    gender: req.body.gender,
+                    race: req.body.race,
+                    eye: req.body.eye,
+                    hair: req.body.hair,
+                    date_of_birth: req.body.date_of_birth,
+                    height: req.body.height,
+                    weight: req.body.weight,
+                    scars_marks_tattoos: req.body.scars_marks_tattoos,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                    gang_affiliation: req.body.gang_affiliation,
+                    mugshot: req.body.mugshot,
+                }
+            );
+    
+            if (!errors.isEmpty()) {
+                
+                res.render('person_form', { title: 'Create Person', person: person, errors: errors.array() });
+                return;
+            }
+            else {
+                
+                person.save(function (err) {
+                    if (err) { return next(err); }
+                    
+                    res.redirect(person.url);
+                });
+            }
+        }
+    ];
+    exports.person_list = [
 
         (req, res, next) => {
     
