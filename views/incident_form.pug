@@ -1,14 +1,17 @@
+doctype html
 head
+  html(style="background: #f7931d;")
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
-  title= title
-  link(rel='stylesheet' href='assets/bootstrap/css/bootstrap.min.css')
-  link(rel='stylesheet' href='assets/fonts/font-awesome.min.css')
-  link(rel='stylesheet' href='assets/css/styles.css')
-  link(rel='stylesheet' href='assets/css/Table-With-Search-1.css')
-  link(rel='stylesheet' href='assets/css/Table-With-Search.css')
-h1(style='background: #f2f2f2;padding: 0px;margin: 1em;border-radius: 11px;text-align: center;margin-left: 40px;')= title
-form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;' method='POST' action='')
+  title RMS Form
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/assets/fonts/font-awesome.min.css')
+  link(rel='stylesheet' href='/assets/css/styles.css')
+  link(rel='stylesheet' href='/assets/css/Table-With-Search-1.css')
+  link(rel='stylesheet' href='/assets/css/Table-With-Search.css')
+  body(style="background: #f7931d;")
+h1(style='background: #f2f2f2;padding: 0px;margin: 1em;border-radius: 11px;text-align: center;margin-left: 40px;') RMS Incident Form
+form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;')
   .form-group.d-flex.justify-content-center.align-content-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;margin-bottom: -60px;text-align: center;')
     label.m-auto(style='font-size: 1.6em;margin: 0px;margin-left: 11px;text-align: center;')
       | Incident Report Number
@@ -44,9 +47,9 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
       | Incident Type
       select.form-control
         optgroup(label='Incident Type')
-          option(value='12' selected='') 211 (Robbery)
-          option(value='13') 236 (Threat)
-          option(value='14') 237 (Drugs
+          option(value='' selected='') 211 (Robbery)
+          option(value='') 236 (Threat)
+          option(value='') 237 (Drugs)
           option(value='') 240 (Assault)
           option(value='') 245 (Weapons Violation)
           option(value='') 261 (Rape)
@@ -55,11 +58,11 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
           option(value='') 415 (Subject Disturbing)
           option(value='') 415B (Criminal Damage)
           option(value='') 4150 (Violation of Court Order)
-          option(value='') 418T (Tresspassing)
+          option(value='') 418T (Trespassing)
           option(value='') 451 (Homicide)
           option(value='') 459 (Burglary)
           option(value='') 487 (Theft)
-          option(value='') 601 (Missings Person)
+          option(value='') 601 (Missing Person)
           option(value='') 647 (Suspicious Person/Activity)
           option(value='') 901H (Dead Body)
           option(value='') 918 (Insane Person)
@@ -86,14 +89,14 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
             tr.warning.no-result
               td(colspan='12')
                 i.fa.fa-warning
-                | &nbsp; No Result
+                | &nbsp; No Result !!!
             tr
-              td(style='text-align: center;') #{first_name}
-              td(style='text-align: center;') #{location_information}
-              td(style='text-align: center;') #{phone_number}
-              td(style='text-align: center;') 
+              td(style='text-align: center;') Mario
+              td(style='text-align: center;') Yes
+              td(style='text-align: center;') 5555 Mushroom Kingdom
+              td(style='text-align: center;') 555-555-5555
               td(style='text-align: center;')
-                img(src='assets/img/MarioNSMBUDeluxe.png' style='height: 71px;')
+                img(src='' style='height: 71px;')
               td
                 button.btn.btn-success(style='margin-left: 5px;' type='submit')
                   i.fa.fa-check(style='font-size: 15px;')
@@ -121,20 +124,20 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
             tr.warning.no-result
               td(colspan='12')
                 i.fa.fa-warning
-                | &nbsp; No Result
+                | &nbsp; No Result !!!
             tr
-              td(style='text-align: center;') #{colorofcar}
-              td(style='text-align: center;') #{vin}
-              td(style='text-align: center;') #{model}
+              td(style='text-align: center;') 6885YOSHI
+              td(style='text-align: center;') GRN (Green)
+              td(style='text-align: center;') 576088685
+              td(style='text-align: center;') Yoshi
               td(style='text-align: center;')
-              td(style='text-align: center;') #{owners}
-                img(src='assets/img/Super_Smash_Bros._Ultimate_-_Character_Art_-_Yoshi.png' style='height: 71px;')
+                img(src='' style='height: 71px;')
               td
                 button.btn.btn-success(style='margin-left: 5px;' type='submit')
                   i.fa.fa-check(style='font-size: 15px;')
                 button.btn.btn-danger(style='margin-left: 5px;' type='submit')
                   i.fa.fa-trash(style='font-size: 15px;')
-              td(style='text-align: center;') #{firstname}
-script(src='assets/js/jquery.min.js')
-script(src='assets/bootstrap/js/bootstrap.min.js')
-script(src='assets/js/Table-With-Search.js')
+              td(style='text-align: center;') Mario
+script(src='/assets/js/jquery.min.js')
+script(src='/assets/bootstrap/js/bootstrap.min.js')
+script(src='/assets/js/Table-With-Search.js')
