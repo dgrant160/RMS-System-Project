@@ -3,71 +3,70 @@ head
   html(style="background: #f7931d;")
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
-  title RMS Form
+  title= title
   link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet' href='/assets/fonts/font-awesome.min.css')
   link(rel='stylesheet' href='/assets/css/styles.css')
   link(rel='stylesheet' href='/assets/css/Table-With-Search-1.css')
   link(rel='stylesheet' href='/assets/css/Table-With-Search.css')
   body(style="background: #f7931d;")
-h1(style='background: #f2f2f2;padding: 0px;margin: 1em;border-radius: 11px;text-align: center;margin-left: 40px;') RMS Incident Form
-form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;')
+h1(style='background: #f2f2f2;padding: 0px;margin: 1em;border-radius: 11px;text-align: center;margin-left: 40px;')=title
+form(method='POST' style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;')
   .form-group.d-flex.justify-content-center.align-content-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;margin-bottom: -60px;text-align: center;')
     label.m-auto(style='font-size: 1.6em;margin: 0px;margin-left: 11px;text-align: center;')
       | Incident Report Number
       br
-      input.form-control(type='text' style='padding: 0px;')
+      input.form-control(name='irn' type='text' style='padding: 0px;')
     label.m-auto(style='font-size: 1.5em;margin: 0px;text-align: center;height: 62px;width: 188px;border-radius: 0px;padding: 0px;margin-top: 0px;margin-bottom: 0px;line-height: 8px;')
       br
       | Occurrence Date &amp; Time
       br
       br
-      input.form-control(type='date' style='height: 38px;border-radius: 5px;padding: 0px;line-height: 24px;text-align: left;')
+      input.form-control(name='date' type='date' style='height: 38px;border-radius: 5px;padding: 0px;line-height: 24px;text-align: left;')
     label.m-auto(style='font-size: 1.6em;margin: 0px;text-align: center;')
       | Location Information
-      input.form-control(type='text' style='margin: -1px;')
+      input.form-control(name='location_info' type='text' style='margin: -1px;')
     label.m-auto(style='font-size: 1.6em;margin-left: 0px;text-align: center;margin-bottom: 0px;')
       | Location Common Name
-      input.form-control(type='text')
+      input.form-control(name='location_name' type='text')
   .form-group.text-center.d-flex.flex-row.justify-content-center.flex-wrap(style='margin: 0px;')
     label.text-center.d-flex.flex-row.flex-shrink-1(style='font-size: 2em;text-align: center;') Narrative
-    textarea.form-control.d-lg-flex(style='line-height: 70px;text-align: center;border-radius: 22px;margin: 0px;margin-left: 10px;margin-right: 10px;')
+    textarea.form-control.d-lg-flex(type='text' name='narrative'  style='line-height: 70px;text-align: center;border-radius: 22px;margin: 0px;margin-left: 10px;margin-right: 10px;')
   .form-group.d-lg-flex.m-auto.justify-content-lg-center.align-items-lg-center(style='text-align: center;margin-bottom: 16px;margin-left: 0px;margin-top: 0px;')
     label.m-auto
       | Officer Name
-      input.form-control(type='text')
+      input.form-control(name='officer' type='text')
     label.m-auto
       | Badge Number
-      input.form-control(type='text')
+      input.form-control(name='badge' type='text')
     label.m-auto
       | Report Date &amp; Time
       br
-      input.form-control(type='text')
+      input.form-control(name='report_date' type='text')
     label.m-auto(style='text-align: center;')
       | Incident Type
-      select.form-control
+      select.form-control(type='select' name='type')
         optgroup(label='Incident Type')
-          option(value='' selected='') 211 (Robbery)
-          option(value='') 236 (Threat)
-          option(value='') 237 (Drugs)
-          option(value='') 240 (Assault)
-          option(value='') 245 (Weapons Violation)
-          option(value='') 261 (Rape)
-          option(value='') 318 (Fraud)
-          option(value='') 390D (Drunk Driver)
-          option(value='') 415 (Subject Disturbing)
-          option(value='') 415B (Criminal Damage)
-          option(value='') 4150 (Violation of Court Order)
-          option(value='') 418T (Trespassing)
-          option(value='') 451 (Homicide)
-          option(value='') 459 (Burglary)
-          option(value='') 487 (Theft)
-          option(value='') 601 (Missing Person)
-          option(value='') 647 (Suspicious Person/Activity)
-          option(value='') 901H (Dead Body)
-          option(value='') 918 (Insane Person)
-          option(value='') 961 (Collision)
-          option(value='')
+          option(value='211' selected='') 211 (Robbery)
+          option(value='236') 236 (Threat)
+          option(value='237') 237 (Drugs)
+          option(value='240') 240 (Assault)
+          option(value='245') 245 (Weapons Violation)
+          option(value='261') 261 (Rape)
+          option(value='318') 318 (Fraud)
+          option(value='390D') 390D (Drunk Driver)
+          option(value='415') 415 (Subject Disturbing)
+          option(value='415B') 415B (Criminal Damage)
+          option(value='4150') 4150 (Violation of Court Order)
+          option(value='418T') 418T (Trespassing)
+          option(value='451') 451 (Homicide)
+          option(value='459') 459 (Burglary)
+          option(value='487') 487 (Theft)
+          option(value='601') 601 (Missing Person)
+          option(value='647') 647 (Suspicious Person/Activity)
+          option(value='901H') 901H (Dead Body)
+          option(value='918') 918 (Insane Person)
+          option(value='961') 961 (Collision)
   .form-group.d-lg-flex.m-auto.justify-content-lg-center.align-items-lg-center
     .col-md-12.search-table-col
       label(style='font-size: 28px;') Related Persons
@@ -138,6 +137,7 @@ form(style='margin: 2em;background: #eeeeee;border-radius: 10px;font-size: 1em;'
                 button.btn.btn-danger(style='margin-left: 5px;' type='submit')
                   i.fa.fa-trash(style='font-size: 15px;')
               td(style='text-align: center;') Mario
+      button.btn.btn-primary(type='submit') Submit
 script(src='/assets/js/jquery.min.js')
 script(src='/assets/bootstrap/js/bootstrap.min.js')
 script(src='/assets/js/Table-With-Search.js')

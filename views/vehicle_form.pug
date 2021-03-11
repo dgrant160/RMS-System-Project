@@ -3,20 +3,20 @@ html(style="background: #f7931d;")
 head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
-  title Vehicle Form
+  title= title
   link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet' href='/assets/fonts/font-awesome.min.css')
   link(rel='stylesheet' href='/assets/css/styles.css')
   body(style="background: #f7931d;")
-h1(style='background: #f2f2f2;padding: 0px;margin: 0px;border-radius: 11px;text-align: center;margin-left: 60px;margin-right: 60px;margin-top: 14px;margin-bottom: 38px;') RMS Vehicle Form
-form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-content-center.align-items-center.align-content-center.align-self-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(style='margin: 0px;background: #eeeeee;border-radius: 10px;font-size: 1em;padding: 24px;margin-right: 60px;width: 859.2px;height: 622px;margin-left: 60px;margin-top: 0px;')
+h1(style='background: #f2f2f2;padding: 0px;margin: 0px;border-radius: 11px;text-align: center;margin-left: 60px;margin-right: 60px;margin-top: 14px;margin-bottom: 38px;')= title
+form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-content-center.align-items-center.align-content-center.align-self-center.flex-wrap.m-auto.justify-content-lg-center.align-items-lg-center(method='POST' style='margin: 0px;background: #eeeeee;border-radius: 10px;font-size: 1em;padding: 24px;margin-right: 60px;width: 859.2px;height: 622px;margin-left: 60px;margin-top: 0px;')
   .form-group.d-flex.d-lg-flex.flex-row.flex-grow-1.m-auto.justify-content-lg-center.align-items-lg-center(style='font-size: .7em;text-align: center;margin-right: 0px;padding: 0px;margin-top: 0px;')
     label.m-auto(style='font-size: 1.6em;text-align: center;')
       | License Plate&nbsp;
-      input.form-control(type='text' style='margin: -1px;')
+      input.form-control(name='license' type='text' style='margin: -1px;')
     label.m-auto(style='font-size: 1.6em;text-align: center;')
       | State
-      select
+      select(name='state' type="select")
         option(value='') --
         option(value='AL') Alabama
         option(value='AK') Alaska
@@ -71,27 +71,27 @@ form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-con
         option(value='WY') Wyoming
     label.m-auto(style='text-align: center;font-size: 20;')
       | Value
-      input.form-control(type='text')
+      input.form-control(name='value' type='text')
   .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
     label.m-auto(style='text-align: center;')
       | Color
-      input.form-control(type='text')
+      input.form-control(name='color' type='text')
     label.m-auto(style='text-align: center;')
       | Year
-      input.form-control(type='text')
+      input.form-control(name='year' type='text')
     label.m-auto(style='text-align: center;')
       | Make
-      input.form-control(type='text')
+      input.form-control(name='make' type='text')
   .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center(style='padding: 0px;margin: 0px;margin-right: 0px;')
     label.m-auto(style='text-align: center;')
       | Body Type
-      input.form-control(type='text')
+      input.form-control(name='body' type='text')
     label.m-auto(style='text-align: center;')
       | Model
-      input.form-control(type='text')
+      input.form-control(name='model' type='text')
     label.m-auto(style='text-align: center;')
       | VIN
-      input.form-control(type='text')
+      input.form-control(name='vin' type='text')
   .form-group.d-flex.d-lg-flex.flex-row.flex-fill.justify-content-center.align-content-center.flex-wrap.justify-content-lg-center.align-items-lg-center
     .col-md-12.search-table-col(style='margin-top: 24px;')
       label(style='font-size: 28px;') Registered Owner
@@ -122,5 +122,6 @@ form.text-center.d-flex.flex-row.flex-grow-1.flex-shrink-1.flex-fill.justify-con
                   i.fa.fa-check(style='font-size: 15px;')
                 button.btn.btn-danger(style='margin-left: 5px;' type='submit')
                   i.fa.fa-trash(style='font-size: 15px;')
+        button.btn.btn-primary(type='submit') Submit
 script(src='/assets/js/jquery.min.js')
 script(src='/assets/bootstrap/js/bootstrap.min.js')

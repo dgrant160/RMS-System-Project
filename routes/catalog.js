@@ -15,7 +15,7 @@ var vehicle_controller = require('../controllers/vehicleController');
  router.get('/person/create', person_controller.person_create_get);
 
 // // POST request for creating person.
-// router.post('/person/create', person_controller.person_create_post);
+ router.post('/person/create', person_controller.person_create_post);
 
 // // GET request to delete person.
 // router.get('/person/:id/delete', person_controller.person_delete_get);
@@ -41,7 +41,7 @@ var vehicle_controller = require('../controllers/vehicleController');
 router.get('/incident/create', incident_controller.incident_create_get);
 
 // // POST request for creating incident.
-// router.post('/incident/create', incident_controller.incident_create_post);
+router.post('/incident/create', incident_controller.incident_create_post);
 
 // // GET request to delete incident.
 // router.get('/incident/:id/delete', incident_controller.incident_delete_get);
@@ -67,7 +67,7 @@ router.get('/incident/create', incident_controller.incident_create_get);
 router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
 
 // //POST request for creating vehicle.
-// router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
+router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
 
 // // GET request to delete vehicle.
 // router.get('/vehicle/:id/delete', vehicle_controller.vehicle_delete_get);

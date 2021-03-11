@@ -1,24 +1,30 @@
 var mongoose = require('mongoose');
 var faker = require('faker');
+const { select } = require('async');
 
 
 var Schema = mongoose.Schema;
 
 var PersonSchema = new Schema({
-    first_name: { type: String, required: true, maxlength: 100 },
-    last_name : {type: String, required: true, maxlength : 100},
-    reporting_person: { type: String, maxlength: 100 },
-    witness: { type: String, required: true, maxlength: 100 },
-    victim: { type: String, required: true, maxlength: 100 },
-    investigative_lead: { type: String, required: true, maxlength: 100 },
-    Suspect: { type: String, required: true, maxlength: 100 },
-    race: { type: String, required: true, maxlength: 100 },
-    gender: { type: String, required: true, maxlength: 100 },
-    height: { type: String, required: true, maxlength: 3 },
-    weight: { type: String, required: true, maxlength: 3 },
-    state: {type: String, required: true, maxlength : 100},
-    country: {type: String, required: true, maxlength : 100},
-    city : {type: String, required: true, maxlength : 100},
-    phone_number: { type: String, required: true, maxlength: 10000000 }
+        name: { type: String, required: true},
+        ssn : {type: String, required: true},
+        hazard: { type: String},
+        gender: { type: String, required: true,},
+        race: { type: String, required: true},
+        eye: { type: String, required: true},
+        hair: { type: String, required: true},
+        date_of_birth: { type: Date, required: true},
+        age: { type: String, required: true},
+        scars_marks_tattoos: { type: String, required: true},
+        height: { type: String, required: true},
+        weight: { type: String, required: true},
+        address: {type: String, required: true},
+        phone: {type: String, required: true},
+        gang_affiliation : {type: String, required: true,},
+        mugshot: { type: String, required: true}
+});
+
+PersonSchema.virtual('url').get(function () {
+    return '/catalog/person/' + this._id;
 });
 module.exports = mongoose.model('Person', PersonSchema);

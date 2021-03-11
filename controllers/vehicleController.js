@@ -1,5 +1,6 @@
 var person = require('../models/person');
 var async = require('async');
+var Vehicle = require('../models/vehicle');
 exports.index = function (req,res) {
     res.render('testing');
 }
@@ -29,22 +30,21 @@ exports.vehicle_create_post = [
                 body: req.body.body,
                 model: req.body.model,
                 vin: req.body.vin,
-                owner: req.body.owner,
             }
         );
 
-        if (!errors.isEmpty()) {
+        // if (!errors.isEmpty()) {
             
-            res.render('vehicle_form', { title: 'Create Vehicle', vehicle: vehicle, errors: errors.array() });
-            return;
-        }
-        else {
+        //     res.render('vehicle_form', { title: 'Create Vehicle', vehicle: vehicle, errors: errors.array() });
+        //     return;
+        // }
+        // else {
             
             vehicle.save(function (err) {
                 if (err) { return next(err); }
                 
                 res.redirect(vehicle.url);
             });
-        }
+       // }
     }
 ];
