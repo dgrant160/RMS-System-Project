@@ -55,7 +55,7 @@ app.post('/', (req, res) => {
             vitim: faker.name.firstname(),
             race: faker.commerce.color(),
             gender: faker.name.gender(),
-            image : faker.image.avatar(),
+            image: faker.image.avatar(),
             locationinfo: faker.address.streetAddress(),
             date: faker.date.recent()
         })
@@ -85,7 +85,7 @@ app.post('/', (req, res) => {
             info: faker.lorem.text(),
             badgenumber: faker.random.number(),
             incident: incident[faker.random.number],
-            image : faker.image.avatar()
+            image: faker.image.avatar()
 
         })
         fakke.save((err, data) => {
@@ -114,7 +114,7 @@ app.post('/', (req, res) => {
             type: faker.vehicle.type(),
             owners: faker.name.findName(),
             value: faker.finance.amount(),
-            image : faker.image.avatar()
+            image: faker.image.avatar()
         })
         fakke.save((err, data) => {
             if (err) {
@@ -123,7 +123,7 @@ app.post('/', (req, res) => {
         })
     }
     res.redirect('/');
-});  
+});
 
 
 // function startPost(event){
